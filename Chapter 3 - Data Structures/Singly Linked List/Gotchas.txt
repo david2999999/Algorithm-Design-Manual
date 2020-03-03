@@ -1,0 +1,4 @@
+- Arrow operator is used to access members of structures or the unions using pointers
+- Dot operator is used to normally access members of a structure or union
+
+- Malloc allocates a chunk of memory in the heap and returns a pointer to it.

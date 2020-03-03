@@ -1,0 +1,12 @@
+Stacks – Support retrieval by last-in, first-out (LIFO) order. Stacks are simple
+to implement and very efficient. For this reason, stacks are probably the
+right container to use when retrieval order doesn’t matter at all, such as
+when processing batch jobs. The put and get operations for stacks are usually
+called push and pop:
+    – Push(x,s): Insert item x at the top of stack s.
+    – Pop(s): Return (and remove) the top item of stack s.
+
+LIFO order arises in many real-world contexts. People crammed into a subway
+car exit in LIFO order. Food inserted into my refrigerator usually exits the
+same way, despite the incentive of expiration dates. Algorithmically, LIFO
+tends to happen in the course of executing recursive algorithms.

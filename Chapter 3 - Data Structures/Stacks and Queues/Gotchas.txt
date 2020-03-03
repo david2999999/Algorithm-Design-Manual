@@ -1,0 +1,1 @@
+- Containers are data structures that permits the storage and retrieval of data items independent of content.

@@ -43,7 +43,6 @@ list *predecessor_list(list *l, item_type x) {
 delete_list(list **l, item_type x) {
     list *p;
     list *pred;
-    list *search_list(), *predecessor_list();
 
     p = search_list(*l, x);
     if (p != NULL) {

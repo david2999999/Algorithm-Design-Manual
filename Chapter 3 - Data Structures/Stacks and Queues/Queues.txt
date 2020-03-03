@@ -1,0 +1,17 @@
+Queues – Support retrieval in first in, first out (FIFO) order. This is surely
+the fairest way to control waiting times for services. You want the container
+holding jobs to be processed in FIFO order to minimize the maximum time
+spent waiting. Note that the average waiting time will be the same regardless
+of whether FIFO or LIFO is used. Many computing applications involve data
+items with infinite patience, which renders the question of maximum waiting
+time moot.
+
+Queues are somewhat trickier to implement than stacks and thus are most
+appropriate for applications (like certain simulations) where the order is important.
+The put and get operations for queues are usually called enqueue
+and dequeue.
+    – Enqueue(x,q): Insert item x at the back of queue q.
+    – Dequeue(q): Return (and remove) the front item from queue q.
+
+We will see queues later as the fundamental data structure controlling
+breadth-first searches in graphs.

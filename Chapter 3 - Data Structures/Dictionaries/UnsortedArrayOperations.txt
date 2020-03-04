@@ -1,0 +1,27 @@
+- Search is implemented by testing the search key k against (potentially) each
+    element of an unsorted array. Thus, search takes linear time in the worst case,
+    which is when key k is not found in A.
+
+- Insertion is implemented by incrementing n and then copying item x to
+    the nth cell in the array, A[n]. The bulk of the array is untouched, so this
+    operation takes constant time.
+
+- Deletion is somewhat trickier, hence the superscript(∗) in the table. The
+    definition states that we are given a pointer x to the element to delete, so
+    we need not spend any time searching for the element. But removing the xth
+    element from the array A leaves a hole that must be filled. We could fill the
+    hole by moving each of the elements A[x + 1] to A[n] up one position, but
+    this requires Θ(n) time when the first element is deleted. The following idea
+    is better: just write over A[x] with A[n], and decrement n. This only takes
+    constant time.
+
+- The definition of the traversal operations, Predecessor and Successor, refer
+    to the item appearing before/after x in sorted order. Thus, the answer is
+    not simply A[x − 1] (or A[x + 1]), because in an unsorted array an element’s
+    physical predecessor (successor) is not necessarily its logical predecessor (successor).
+    Instead, the predecessor of A[x] is the biggest element smaller than
+    A[x]. Similarly, the successor of A[x] is the smallest element larger than A[x].
+    Both require a sweep through all n elements of A to determine the winner.
+
+- Minimum and Maximum are similarly defined with respect to sorted order,
+    and so require linear sweeps to identify in an unsorted array.

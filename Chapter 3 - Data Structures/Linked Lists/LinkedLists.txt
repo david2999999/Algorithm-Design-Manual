@@ -1,0 +1,37 @@
+- Insertion/Deletion – The complication here is deletion from a singly-linked
+    list. The definition of the Delete operation states we are given a pointer x to
+    the item to be deleted. But what we really need is a pointer to the element
+    pointing to x in the list, because that is the node that needs to be changed.
+    We can do nothing without this list predecessor, and so must spend linear
+    time searching for it on a singly-linked list. Doubly-linked lists avoid this
+    problem, since we can immediately retrieve the list predecessor of x.
+    Deletion is faster for sorted doubly-linked lists than sorted arrays, because
+    splicing out the deleted element from the list is more efficient than filling
+    the hole by moving array elements. The predecessor pointer problem again
+    complicates deletion from singly-linked sorted lists.
+
+- Search – Sorting provides less benefit for linked lists than it did for arrays. Binary
+    search is no longer possible, because we can’t access the median element
+    without traversing all the elements before it. What sorted lists do provide is
+    quick termination of unsuccessful searches, for if we have not found Abbott by
+    the time we hit Costello we can deduce that he doesn’t exist. Still, searching
+    takes linear time in the worst case.
+
+- Traversal operations – The predecessor pointer problem again complicates
+    implementing Predecessor. The logical successor is equivalent to the node
+    successor for both types of sorted lists, and hence can be implemented in
+    constant time.
+
+- Maximum – The maximum element sits at the tail of the list, which would
+    normally require Θ(n) time to reach in either singly- or doubly-linked lists.
+    However, we can maintain a separate pointer to the list tail, provided we
+    pay the maintenance costs for this pointer on every insertion and deletion.
+    The tail pointer can be updated in constant time on doubly-linked lists: on
+    insertion check whether last->next still equals NULL, and on deletion set
+    last to point to the list predecessor of last if the last element is deleted.
+    We have no efficient way to find this predecessor for singly-linked lists. So
+    why can we implement maximum in Θ(1) on singly-linked lists? The trick is
+    to charge the cost to each deletion, which already took linear time. Adding
+    an extra linear sweep to update the pointer does not harm the asymptotic
+    complexity of Delete, while gaining us Maximum in constant time as a reward
+    for clear thinking

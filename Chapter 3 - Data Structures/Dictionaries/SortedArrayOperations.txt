@@ -1,0 +1,13 @@
+Implementing a dictionary using a sorted array completely reverses our notions
+of what is easy and what is hard. Searches can now be done in O(log n) time, using
+binary search, because we know the median element sits in A[n/2]. Since the upper
+and lower portions of the array are also sorted, the search can continue recursively
+on the appropriate portion. The number of halvings of n until we get to a single
+element is ⌈lg n⌉.
+
+The sorted order also benefits us with respect to the other dictionary retrieval
+operations. The minimum and maximum elements sit in A[1] and A[n], while the
+predecessor and successor to A[x] are A[x − 1] and A[x + 1], respectively.
+Insertion and deletion become more expensive, however, because making room
+for a new item or filling a hole may require moving many items arbitrarily. Thus
+both become linear-time operations.

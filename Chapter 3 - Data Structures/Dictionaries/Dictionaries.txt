@@ -1,0 +1,16 @@
+The dictionary data type permits access to data items by content. You stick an
+item into a dictionary so you can find it when you need it.
+
+The primary operations of dictionary support are:
+    - Search(D,k) – Given a search key k, return a pointer to the element in dictionary
+        D whose key value is k, if one exists.
+    - Insert(D,x) – Given a data item x, add it to the set in the dictionary D.
+    - Delete(D,x) – Given a pointer to a given data item x in the dictionary D,
+        remove it from D.
+
+Certain dictionary data structures also efficiently support other useful operations:
+    - Max(D) or Min(D) – Retrieve the item with the largest (or smallest) key from D.
+        This enables the dictionary to serve as a priority queue.
+    - Predecessor(D,k) or Successor(D,k) – Retrieve the item from D whose key is
+        immediately before (or after) k in sorted order. These enable us to iterate
+        through the elements of the data structure.

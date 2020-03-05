@@ -34,6 +34,25 @@ tree *find_minimum(tree *t) {
     return min;
 }
 
+insert_tree(tree **t, item_type x, tree *parent) {
+    tree *p;
+
+    if (*t == NULL) {
+        p = malloc(sizeof(tree));
+        p -> item = x;
+        p -> left = p -> right = NULL;
+        p -> parent = parent;
+        *l = p;
+        return;
+    }
+
+    if (x < (*t) -> item) {
+        insert_tree(&((*t) -> left), x, *t);
+    } else {
+        insert_tree(&((*t) -> right), x, *t);
+    }
+}
+
 void inorder_traverse_tree(tree *t) {
     if (t != NULL) {
         inorder_traverse_tree(t -> left);

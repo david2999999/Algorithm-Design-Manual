@@ -18,3 +18,18 @@ tree *search_tree(tree *t, item_type x) {
         return search(t -> right, x);
     }
 }
+
+tree *find_minimum(tree *t) {
+    tree *min;
+
+    if (t == NULL) {
+        return NULL;
+    }
+
+    min = t;
+    while (min -> left != NULL) {
+        min = min -> left;
+    }
+
+    return min;
+}

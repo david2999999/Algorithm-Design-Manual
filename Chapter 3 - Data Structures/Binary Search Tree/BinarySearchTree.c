@@ -33,3 +33,27 @@ tree *find_minimum(tree *t) {
 
     return min;
 }
+
+void inorder_traverse_tree(tree *t) {
+    if (t != NULL) {
+        inorder_traverse_tree(t -> left);
+        process_item(t -> item);
+        inorder_traverse_tree(t -> right);
+    }
+}
+
+void preorder_traverse_tree(tree *t) {
+    if (t != NULL) {
+        process_item(t -> item);
+        preorder_traverse_tree(t -> left);
+        preorder_traverse_tree(t -> right);
+    }
+}
+
+void postorder_traverse_tree(tree *t) {
+    if (t != NULL) {
+        postorder_traverse_tree(t -> right);
+        postorder_traverse_tree(t -> left);
+        process_item(t -> item);
+    }
+}

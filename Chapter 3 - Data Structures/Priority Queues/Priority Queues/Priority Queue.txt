@@ -1,0 +1,11 @@
+Priority Queues
+    - Many algorithms process items in a specific order
+        - Suppose you must schedule jobs according to their importance relative to other jobs
+        - Scheduling jobs requires sorting them by importance
+    - Priority queues provide more flexibility than simple sorting
+        - they allow new elements to enter a system at arbitrary intervals
+        - It is more cost effective to insert a new job into a priority queue than to re-sort everything every arrival
+    - The basic priority queue supports three primary operations
+        - insert an item with key k
+        - Find minimum/maximum
+        - Delete minimum/maximum

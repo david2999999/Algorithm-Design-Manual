@@ -17,7 +17,7 @@ Problems:
         - We will first initialize our tree
         - While !(end of file)
             - read a number
-            - insert the number in our tree
+            - insert the number into our tree
         - Do a in order traversal. Left -> mid -> right
             - left < mid < right
         - What is the time complexity? O(nlogn) + O(n) = O(nlogn)
@@ -25,7 +25,17 @@ Problems:
             - O(n) - in order traversal of tree
 
     2. How can you sort in O(n log n) time using only minimum, successor, and insert?
-        -
+        - We will first initialize our tree
+        - While we have not finish reading the numbers
+            - read a number
+            - insert the number into our tree
+        - retrieve our minimum value as our current node(left most position in our tree)
+        - While our current node is not null
+            - traverse the tree using successor
+        - What is the time complexity? O(nlogn) + O(logn) + O(nlogn) = O(nlogn)
+            - O(nlogn) = reading n numbers and insert them into our tree O(nlogn)
+            - O(logn) = retrieving our minimum value on the leftmost position
+            - O(nlogn) = continuously calling successor on n nodes
 
     3. How can you sort in O(n log n) time using only minimum, insert, delete, search?
 

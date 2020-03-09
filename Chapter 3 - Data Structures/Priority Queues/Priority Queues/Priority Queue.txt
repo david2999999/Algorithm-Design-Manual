@@ -9,3 +9,24 @@ Priority Queues
         - insert an item with key k
         - Find minimum/maximum
         - Delete minimum/maximum
+
+Implementation of Priority Queue
+    - Unsorted Array
+        - Allows insertion in constant time
+        - Finding the minimum and deleting the minimum in linear time
+            - This is because we have to check each of the elements
+    - Sorted Array
+        - Allows insertion in linear time
+            - We may need to shift elements over when adding elements
+            - We may need to move elements to fill in empty spots when removing element
+        - Allows finding/deleting minimum in constant time
+            - The element will either be at the beginning or at the end of the array
+    - Balanced tree
+        - Allows insertion/deletion to take O(logn)
+            - insertion to the right most position in our lowest depth
+                - then bubble upward
+            - deletion of our root element
+                - swap our root element with the leftmost node in our lower depth
+                - then bubble downward
+        - Allows searching for minimum element in constant time
+            - our root element

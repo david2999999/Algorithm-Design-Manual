@@ -5,3 +5,14 @@ Hashing and Strings
         - Generates an unique identifier number, but they are so large that they will exceed the number of slots in our hash table
         - We must reduce this number to an integer between 0 and (m - 1), where m is the number of slots
         - We can do this by performing a modulus on the our hash number
+
+Collision Resolution
+    - No matter how good our hash functions are, we should be prepare for collisions
+        - Two distinct keys will occasionally hash to the same value
+    - Collision Resolutions approaches
+        - Chaining
+            - represent the hash table as an array of linked list
+                - The ith list represents all of the items that hash to the value of i
+                - If n keys are distributed uniformly in a table, each list will contain roughly n/m elements, making them a constant size when m equals n
+            - Devotes a considerable amount of memory to points
+                - This is space that could make the table larger, hence the list shorter

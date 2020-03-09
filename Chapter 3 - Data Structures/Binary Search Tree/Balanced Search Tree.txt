@@ -1,0 +1,36 @@
+Balance Search Trees
+    - Random search trees are usually good, but if we get unlucky with our order of insertion, we can end up with a linear-height tree
+    - What if we adjust the tree a little after each insertion
+        - Balanced binary search tree data structures have been developed to guarantee the height of the tree always to be O(logn)
+            - Therefore all of the dictionary operations (insert, delete, query) takes O(logn)
+    - Tree implementation includes
+        - red black trees
+        - splay trees
+
+Problems:
+    Problem: You are given the task of reading n numbers and then printing them
+        out in sorted order. Suppose you have access to a balanced dictionary data structure,
+        which supports the operations search, insert, delete, minimum, maximum,
+        successor, and predecessor each in O(log n) time.
+
+    1. How can you sort in O(n log n) time using only insert and in-order traversal?
+        - We will first initialize our tree
+        - While !(end of file)
+            - read a number
+            - insert the number in our tree
+        - Do a in order traversal. Left -> mid -> right
+            - left < mid < right
+        - What is the time complexity? O(nlogn) + O(n) = O(nlogn)
+            - O(nlogn) - we have n numbers and have to insert each of them into our tree with a runtime of O(logn)
+            - O(n) - in order traversal of tree
+
+    2. How can you sort in O(n log n) time using only minimum, successor, and insert?
+        -
+
+    3. How can you sort in O(n log n) time using only minimum, insert, delete, search?
+
+
+Gotchas
+    - Picking the wrong data structure for the job can be disastrous in terms of performance
+        - Identifying the best data structure is usually not as critical, because there can be several choices that perform similarly
+

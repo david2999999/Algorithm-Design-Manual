@@ -5,3 +5,16 @@ Binary Search Tree
             - Consider inserting elements in ascending order, the tree will become a skinny linear height tree, where
               only right pointers are used.
     - Binary trees can have heights ranging from logn to n.
+
+Balance Search Trees
+    - Random search trees are usually good, but if we get unlucky with our order of insertion, we can end up with a linear-height tree
+    - What if we adjust the tree a little after each insertion
+        - Balanced binary search tree data structures have been developed to guarantee the height of the tree always to be O(logn)
+            - Therefore all of the dictionary operations (insert, delete, query) takes O(logn)
+    - Tree implementation includes
+        - red black trees
+        - splay trees
+
+Gotchas
+    - Picking the wrong data structure for the job can be disastrous in terms of performance
+        - Identifying the best data structure is usually not as critical, because there can be several choices that perform similarly

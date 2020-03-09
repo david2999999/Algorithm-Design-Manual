@@ -38,7 +38,19 @@ Problems:
             - O(nlogn) = continuously calling successor on n nodes
 
     3. How can you sort in O(n log n) time using only minimum, insert, delete, search?
-
+        - We will initialize our tree
+        - While we have not finish reading the numbers
+            - read a number
+            - insert the number into our tree
+        - Retrieve the minimum value as our current node (leftmost position in our tree)
+        - While our current node is not null
+            - Print our current node
+            - Delete our current node (this will update our minimum value in the tree)
+            - Set our current node to the new minimum
+        - What is the time complexity? O(nlogn) + O(logn) + O(n(logn + logn)) = O(nlogn)
+            - O(nlogn) - reading n numbers and inserting each number into our tree
+            - O(logn) - finding the minimum value as our current node
+            - O(n(logn + logn)) = For each of the elements, we delete our minimum node, and then update to a new minimum node
 
 Gotchas
     - Picking the wrong data structure for the job can be disastrous in terms of performance

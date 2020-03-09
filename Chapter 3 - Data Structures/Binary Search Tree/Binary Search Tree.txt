@@ -1,0 +1,7 @@
+Binary Search Tree
+    - All three dictionary operate (add, remove, find) takes O(h) time, where h is the height of the tree
+        - Balanced tree h = logn
+        - Unbalance tree h = n
+            - Consider inserting elements in ascending order, the tree will become a skinny linear height tree, where
+              only right pointers are used.
+    - Binary trees can have heights ranging from logn to n.

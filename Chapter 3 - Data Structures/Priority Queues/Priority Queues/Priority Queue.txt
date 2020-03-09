@@ -15,6 +15,10 @@ Implementation of Priority Queue
         - Allows insertion in constant time
         - Finding the minimum and deleting the minimum in linear time
             - This is because we have to check each of the elements
+            - We can have a constant look up time of our minimum if we have another pointer to keep track
+              of the current min.
+                - if the user needs the minimum value, we can return this variable
+                - When the user removes the minimum value, we need to search through the array again to find the min
     - Sorted Array
         - Allows insertion in linear time
             - We may need to shift elements over when adding elements

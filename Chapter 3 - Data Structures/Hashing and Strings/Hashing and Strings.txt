@@ -1,0 +1,7 @@
+Hashing and Strings
+    - Hash tables are a very practical way of maintaining a dictionary
+        - It exploits that fact that looking an item up in an array takes constant time once you have its index
+    - A hash function is a mathematical function that maps keys to integers
+        - Generates an unique identifier number, but they are so large that they will exceed the number of slots in our hash table
+        - We must reduce this number to an integer between 0 and (m - 1), where m is the number of slots
+        - We can do this by performing a modulus on the our hash number

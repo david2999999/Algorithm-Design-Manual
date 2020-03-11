@@ -9,3 +9,12 @@ Duplicate Detection Via Hashing
             - We can hash D to an integer and compare it to the hashcodes of the rest of the corpus
                 - Since, we expect few spurious collisions, we can explicitly compare the few documents sharing the exact hash code
                   with little effort.
+        - Is part of this document plagiarized from a document in a large corpus?
+            - A lazy student copies a portion of a web document into their term paper
+            - This is a difficult problem, because adding deleting or changing even one character from the document completely change its hashcode
+            - We could instead build a hashtable of all overlapping windows (substrings) of length w in all the documents in the corpus
+                - Whenever there is a match of hashcodes, there is likely a common substring of length w
+                - We should choose the length w to be long enough so that such a co-occurrence is very unlikely to happen by chance
+            - The downside of this approach is the hash table becomes as large as the documents themselves
+                - We could retain a small but well-chosen subsets of these hash codes for each document leaves us likely to detect
+                  sufficiently long duplicate strings

@@ -1,0 +1,23 @@
+Efficient String Matching via Hashing
+    - Text strings are fundamental to a host of computing applications
+        - programming language parsing/compilation
+        - Web search engines
+        - Biological sequence analysis
+    - primary data structure for representing strings is an array of characters
+        - this allows us constant-time access to the ith character
+
+    - Most fundamental operation on text strings is substring search
+        - Problem: Substring Pattern Matching
+        - Input: A text string t and a pattern string p
+        - Output: Does t contain the pattern p as a substring, and if so where?
+
+        - The brute force method will be checking for the presence of pattern string p in text t overlays the pattern string at every position
+          of the text.
+            - The time complexity of this approach is O(nm), where n = |t| and m = |p|
+        - More complicated, worst-case linear-time search algorithms do exist
+            - The linear expected time algorithm for string matching called Rabin-Karp algorithm
+                - The algorithm involves hashing
+                - Suppose we compute a given hash function on both the pattern string p and the m-character substring
+                    - starting from the ith position of t
+                - If the two strings are different, then the resulting hash will almost certainly be different
+                    - the false positives are rare, but we can spend O(m) time to explicitly check if it is true

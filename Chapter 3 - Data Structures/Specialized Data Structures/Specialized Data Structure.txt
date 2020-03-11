@@ -1,0 +1,8 @@
+Specialized Data Structures
+    - There are data structures for representing more structured or specialized kinds of object, such as points in space, string and graphs
+    - The design principles of these data structures are the same as for basic objects
+        - There is a set of basic operations we need to perform repeatedly
+
+    - String data structures
+        - Characters strings are typically represented by arrays of characters
+        - Suffix trees/arrays are special data structures that preprocess strings to make pattern matching operations faster

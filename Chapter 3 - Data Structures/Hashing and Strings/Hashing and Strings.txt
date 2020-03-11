@@ -16,3 +16,17 @@ Collision Resolution
                 - If n keys are distributed uniformly in a table, each list will contain roughly n/m elements, making them a constant size when m equals n
             - Devotes a considerable amount of memory to points
                 - This is space that could make the table larger, hence the list shorter
+        - Open Addressing
+            - Hash table is maintained as an array of elements
+                - On an insertion, we check to see if the desired position is empty
+                    - if the position is empty, insert the value at the index
+                    - if the position is not empty, we must find another place to insert the value instead
+            - Sequential probing inserts the item in the next open slot in the table
+                - If the table is not too full
+                    - contiguous runs of items should be fairly small, hence the location should only be a few slots from its intended position
+                - Searching for a given key now involves going to the appropriate hash value and check to see if the item is there
+                    - If so, return it
+                    - Otherwise we must keep checking through the length of the run
+                - Deletion in an open addressing scheme can get ugly
+                    - removing one element might break a chain of insertions, making some elements inaccessible
+                    - We have to reinsert all the items in the run following the new hole

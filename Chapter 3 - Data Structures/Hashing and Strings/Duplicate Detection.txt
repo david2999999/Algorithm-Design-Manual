@@ -9,6 +9,7 @@ Duplicate Detection Via Hashing
             - We can hash D to an integer and compare it to the hashcodes of the rest of the corpus
                 - Since, we expect few spurious collisions, we can explicitly compare the few documents sharing the exact hash code
                   with little effort.
+
         - Is part of this document plagiarized from a document in a large corpus?
             - A lazy student copies a portion of a web document into their term paper
             - This is a difficult problem, because adding deleting or changing even one character from the document completely change its hashcode
@@ -18,3 +19,13 @@ Duplicate Detection Via Hashing
             - The downside of this approach is the hash table becomes as large as the documents themselves
                 - We could retain a small but well-chosen subsets of these hash codes for each document leaves us likely to detect
                   sufficiently long duplicate strings
+
+        - How can I convince you that a file isn't changed?
+            - In a close bid auction, each party submits their bid before the announced deadline
+            - If you know what the other parties are bidding, you could arrange to bid $1 more than the highest opponent
+                - The "right" auction strategy is to hack into the computer containing the bid just prior to the deadline
+                    - read the bids and then emerge as the winner
+            - We want to make sure each person are not allowed to change their initial bid
+                - We can create a hash code of their actual bid prior to the deadline
+                - The auctioneer will pick the largest full bid and check if the hash code matches that submitted prior to the deadline
+                    - This cryptographic hashing method provide a way to ensure that the file you give me today is the same as the original

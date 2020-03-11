@@ -6,10 +6,12 @@ Importance of Sorting
 Applications of Sorting
     - Searching
         - Binary search tests whether an item is in a dictionary in O(logn), provided the keys are all sorted
+
     - Closest Pair
         - Given a set of numbers, how do you find the pair of numbers that have the smallest difference between them?
             - Once our numbers are sorted, the closest pair of numbers must lie next to each other somewhere in sorted order
             - A linear time scan completes the job, for a total of O(nlogn) time including the sorting
+
     - Element Uniqueness
         - Are there duplicates in a given set of n items?
             - this is a special case of the closest-pair problem, we we ask if there is a pair separated by a gap of zero
@@ -17,3 +19,14 @@ Applications of Sorting
             - This is O(nlogn) + O(n) = O(nlogn)
         - If we want to achieve O(n) time complexity, we need a data structure to hold previously seen values
             - This method will cost O(n) time complexity and O(n) space complexity
+
+    - Frequency Distribution
+        - Given a sorted set of n items, which element occurs the largest number of times in the set?
+            - If the items are sorted, we can sweep from left to right and count them
+                - since all identical items will be lumped together during sorting
+        - To find out how often an arbitrary element k occurs, look up k using binary search in a sorted array of keys
+            - After we find the key, we can walk to the left of this point until the first element is not k, and then doing the same to the right
+            - This time complexity of this approach is O(logn + c), where c is the number of occurrence of k
+            - A more efficient solution will be doing a double binary search, one for the left index and one for the right index
+                - Then the number of occurrence will be the difference between the two indices
+                - The runtime of this approach is O(logn) + O(logn) = O(logn)

@@ -21,3 +21,20 @@ Efficient String Matching via Hashing
                     - starting from the ith position of t
                 - If the two strings are different, then the resulting hash will almost certainly be different
                     - the false positives are rare, but we can spend O(m) time to explicitly check if it is true
+
+    - What is the runtime complexity of Rabin Carp Algorithm?
+        - How many hash value computations are there?
+            - we have (n - m + 1) + 1 hashes, where n = |t| and m = |p|
+            - (n - m + 1) windows of t
+            - 1 = one hash of our pattern string p
+        - The catch is that it takes O(m) time to compute a hash function on an m-character string
+            - O(n) of such computations seems to leave us with an O(mn) again
+            - But what actually changed from our computation of our computation of H(S, j) and H(S, j + 1)
+                - where j is the position of our input string S
+            - We can see that in the computation, (m - 1) letters in both ranges are the same.
+                - A bit of algebra, we can compute that the difference between the two hashes is just a few computation away,
+                  which gives us constant time computation
+                - So our Hash computation is now constant time
+    - Rabin karp is a good example of a randomized algorithm
+        - we get no guarantee the algorithm runs in O(n + m) times
+            - because we may get unlucky and have the hash values regularly collide with spurious matches

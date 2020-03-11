@@ -10,3 +10,10 @@ Applications of Sorting
         - Given a set of numbers, how do you find the pair of numbers that have the smallest difference between them?
             - Once our numbers are sorted, the closest pair of numbers must lie next to each other somewhere in sorted order
             - A linear time scan completes the job, for a total of O(nlogn) time including the sorting
+    - Element Uniqueness
+        - Are there duplicates in a given set of n items?
+            - this is a special case of the closest-pair problem, we we ask if there is a pair separated by a gap of zero
+        - The most efficient algorithm involving sorting the numbers and then do a linear scan through all adjacent pairs
+            - This is O(nlogn) + O(n) = O(nlogn)
+        - If we want to achieve O(n) time complexity, we need a data structure to hold previously seen values
+            - This method will cost O(n) time complexity and O(n) space complexity

@@ -1,0 +1,12 @@
+Importance of Sorting
+    - Sorting is the basic building block that many other algorithms are built around
+    - Many algorithms appear in the context of sorting, such as divide-and-conquer, data structures and randomized algorithsm
+    - Computers have historically spent more time sorting than anything else
+
+Applications of Sorting
+    - Searching
+        - Binary search tests whether an item is in a dictionary in O(logn), provided the keys are all sorted
+    - Closest Pair
+        - Given a set of numbers, how do you find the pair of numbers that have the smallest difference between them?
+            - Once our numbers are sorted, the closest pair of numbers must lie next to each other somewhere in sorted order
+            - A linear time scan completes the job, for a total of O(nlogn) time including the sorting

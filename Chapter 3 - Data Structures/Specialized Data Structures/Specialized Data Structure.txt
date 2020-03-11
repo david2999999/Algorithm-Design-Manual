@@ -12,3 +12,12 @@ Specialized Data Structures
         - Regions in the plane can be described by polygons, where the boundary of the polygon is given by a chain of line segments
             - Such as an array of points (v1, v2, ..., vn), such at (vi, vi+1) is a segment of the boundary
         - Spatial data structures such as kd-trees organize points and regions by geometric location to support fast search
+
+    - Graph data structures
+        - Graphs are typically represented using either adjacency matrices or adjacency lists
+            - The choice of representation can have a substantial impact on the design of the resulting graph algorithm
+
+    - Set data structures
+        - Subsets of items are typically represented using dictionary to support fast membership queries
+        - Bit vectors are boolean arrays such that the ith bit represents true if i is in the subset
+        - Union-find data structure for maintaining set partitions

@@ -6,3 +6,9 @@ Specialized Data Structures
     - String data structures
         - Characters strings are typically represented by arrays of characters
         - Suffix trees/arrays are special data structures that preprocess strings to make pattern matching operations faster
+
+    - Geometric data structures
+        - Geometric data consists of collections of data points and regions
+        - Regions in the plane can be described by polygons, where the boundary of the polygon is given by a chain of line segments
+            - Such as an array of points (v1, v2, ..., vn), such at (vi, vi+1) is a segment of the boundary
+        - Spatial data structures such as kd-trees organize points and regions by geometric location to support fast search

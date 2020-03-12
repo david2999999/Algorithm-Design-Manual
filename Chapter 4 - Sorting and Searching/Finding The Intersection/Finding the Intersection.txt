@@ -1,0 +1,20 @@
+Question
+    Give an efficient algorithm to determine whether two sets (of size m and
+    n, respectively) are disjoint. Analyze the worst-case complexity in terms of m and
+    n, considering the case where m is substantially smaller than n.
+
+Answer
+    - We have at least three algorithms that comes to mind, all of which are variants of sorting and searching
+        1) Sorting the big set
+            - The big set can be sorted in O(nlogn) time
+            - Then we can do a binary search on each of the m elements in our second set, looking to see if it exists in our big set
+            - Runtime complexity is O(nlogn) + O(mlogn) = O((m + n) logn)
+        2) Sorting the small set
+            - The small set can be sorted in O(mlogm)
+            - We can now do a binary search with of the n elements in the big set, looking to see if it exists in the small
+            - The total time will be O(mlogm) + O(nlogm) = O((n + m)logm)
+        3) Sorting both sets
+            - Once the two sets are sorted, we no longer have to do binary search to detect a common element
+            - We can compare the smallest elements of the two sorted sets, and discard the smaller one if they are not identical
+            - The total cost is
+                - O(nlogn + mlogm + m)

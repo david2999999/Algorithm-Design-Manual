@@ -30,3 +30,19 @@ Applications of Sorting
             - A more efficient solution will be doing a double binary search, one for the left index and one for the right index
                 - Then the number of occurrence will be the difference between the two indices
                 - The runtime of this approach is O(logn) + O(logn) = O(logn)
+
+    - Selection - What is the kth largest element in an array?
+        - If the keys are placed in sorted order, the kth largest can be found in constant time by looking at the kth position
+        - The median element appears in (n/2)nd position in sorted order
+
+    - Convex Hull - What is the polygon of the smallest area that contains a given set of n points in two dimensions
+        - The convex hull is like a rubber band stretched over the points in the plane and then released
+        - The convex hull gives a nice representation of the shape of the points and is an important building blocks for more sophisticated
+          geometric algorithms
+        - How can we use sorting to construct the convex hull?
+            - we can have the points sorted by x-coordinate
+                - Then the points can be inserted from left to right into the hull
+            - Adding a new right-most point may cause others to be deleted, but we can quickly identify these points because they lie inside
+              the polygon formed by adding the new point
+                - These points will be neighbors of the previous point we inserted, so they will be easy to find an delete
+                - The total time is linear after the sorting has been done

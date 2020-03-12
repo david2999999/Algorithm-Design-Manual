@@ -18,3 +18,9 @@ Answer
             - We can compare the smallest elements of the two sorted sets, and discard the smaller one if they are not identical
             - The total cost is
                 - O(nlogn + mlogm + m)
+
+    - Which of these are the fastest method?
+        - The small set sorting approach is better than the large set sorting approach
+
+    - We can have an expected linear time by hashing.
+        - Build a hash table containing the elements of both sets and verify that collisions in the same bucket are in fact identical elements
